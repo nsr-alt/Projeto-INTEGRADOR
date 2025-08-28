@@ -1,7 +1,7 @@
 <?php
  include 'conectar.php';
 
- $nome = $_POST['nome'];
+ $name = $_POST['name'];
  $cpf = $_POST['cpf'];
  $address = $_POST['address'];
  $age = $_POST['age'];
@@ -9,10 +9,10 @@
  $password = $_POST['password'];
 
  // Inserir ao banco
- $sql = "INSERT INTO contatos (nome, cpf, endereco, idade, email, senha) VALUES ('$nome', '$cpf', '$address', '$age', '$email', '$password')";
+ $sql = "INSERT INTO LOGIN (nome, cpf, endereco, idade, email, senha) VALUES ('$name', '$cpf', '$address', '$age', '$email', '$password')";
 
  if ($conexao->query($sql) === TRUE) {
-    echo "Mensagem enviadada com sucesso!";
+    echo "login realizado com sucesso!";
  } else {
     echo "Erro." . $conexao->error;
  }
